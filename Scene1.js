@@ -30,11 +30,13 @@ class Scene1 extends Phaser.Scene {
       frameWidth: 16,
       frameHeight: 24
     });
-    //1.1 load the spritesheet for the beam
     this.load.spritesheet("beam", "assets/spritesheets/beam.png",{
       frameWidth: 16,
       frameHeight: 16
     });
+
+    // 1.2 load the font fies
+    this.load.bitmapFont("pixelFont", "assets/font/font.png", "assets/font/font.xml");
   }
 
   create() {
@@ -93,7 +95,6 @@ class Scene1 extends Phaser.Scene {
       repeat: -1
     });
 
-    //animação do projetil
     this.anims.create({
       key: "beam_anim",
       frames: this.anims.generateFrameNumbers("beam"),
