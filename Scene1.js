@@ -91,6 +91,13 @@ class Scene1 extends Phaser.Scene {
             frameRate: 20,
             repeat: -1
          });
+
+         this.anims.create({
+            key : "beam_anim",
+            frames: this.anims.generateFrameNumbers("beam"),
+            frameRate: 20,
+            repeat: -1
+         });
     }
 }
 

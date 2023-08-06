@@ -85,6 +85,10 @@ class Scene2 extends Phaser.Scene {
         }
     }
 
+    shootBeam(){
+        var beam = new Beam(this);
+    }
+
     update() {
         
         this.moveShip(this.ship1,1);
@@ -96,7 +100,11 @@ class Scene2 extends Phaser.Scene {
         this.movePlayerManager();
 
         if (Phaser.Input.Keyboard.JustDown(this.spacebar)){
-            console.log("fire");
+            this.shootBeam();
+        }
+        for (var i = 0; i < this.projectiles.getChildren().length; i ++){
+            var beam = this.projectiles.getChildren()[i];
+            beam.update();
         }
     }
 }
