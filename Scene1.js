@@ -93,7 +93,7 @@ class Scene1 extends Phaser.Scene {
       repeat: -1
     });
 
-    // 1.2 animation for the beam
+    //animação do projetil
     this.anims.create({
       key: "beam_anim",
       frames: this.anims.generateFrameNumbers("beam"),
