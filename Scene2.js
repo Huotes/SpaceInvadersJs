@@ -100,7 +100,7 @@ class Scene2 extends Phaser.Scene {
     // 1.3 new text using bitmap font
     //this.scoreLabel = this.add.bitmapText(10, 5, "pixelFont", "SCORE ", 16);
 
-    // 4.3 format the score
+    // Formatação do texto para 
     var scoreFormated = this.zeroPad(this.score, 6);
     this.scoreLabel = this.add.bitmapText(10, 5, "pixelFont", "SCORE " + scoreFormated  , 16);
 
