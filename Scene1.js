@@ -35,9 +35,9 @@ class Scene1 extends Phaser.Scene {
       frameHeight: 16
     });
 
-    // 1.2 load the font fies
     this.load.bitmapFont("pixelFont", "assets/font/font.png", "assets/font/font.xml");
 
+    // carrega os sons tanto em formato mp3 quanto em ogg
     this.load.audio("audio_beam", ["assets/sounds/beam.ogg", "assets/sounds/beam.mp3"]);
     this.load.audio("audio_explosion", ["assets/sounds/explosion.ogg", "assets/sounds/explosion.mp3"]);
     this.load.audio("audio_pickup", ["assets/sounds/pickup.ogg", "assets/sounds/pickup.mp3"]);
@@ -45,6 +45,9 @@ class Scene1 extends Phaser.Scene {
   }
 
   create() {
+
+
+
     this.add.text(20, 20, "Loading game...");
     this.scene.start("playGame");
 
@@ -106,6 +109,8 @@ class Scene1 extends Phaser.Scene {
       frameRate: 20,
       repeat: -1
     });
+
+
 
   }
 }
